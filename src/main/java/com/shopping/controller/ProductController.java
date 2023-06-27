@@ -1,6 +1,7 @@
 package com.shopping.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shopping.entity.Product;
 import com.shopping.service.ProductService;
 import com.shopping.util.R;
@@ -23,12 +24,13 @@ public class ProductController {
      * 1 查询轮播商品
      */
     @RequestMapping("/findSwiper")
-    public R findSwiper(){
+    public R findSwiper() {
 
         List<Product> swiperProductList = productService.list(new QueryWrapper<Product>().eq("isSwiper",
                 true).orderByAsc("swiperSort"));
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("message",swiperProductList);
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("message", swiperProductList);
         return R.ok(map);
     }
+
 }

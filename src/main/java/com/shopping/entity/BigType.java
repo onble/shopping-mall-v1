@@ -1,7 +1,10 @@
 package com.shopping.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * 商品大类
@@ -21,6 +24,10 @@ public class BigType {
     private String remark; // 备注
 
     private String image="default.jpg"; // 封面图片
+
+    // 大类中包含的小类集合
+    @TableField(select = false) // 表里没有的字段不映射，否则报错
+    private List<SmallType> smallTypeList;
 
 //    public Integer getId() {
 //        return id;

@@ -18,5 +18,8 @@ public class WebAppConfigurer implements WebMvcConfigurer {
         // 商品大类的图片映射地址修改
         registry.addResourceHandler("/image/bigType/**").addResourceLocations("file:/D:/shopping_v1/bigTypeImgs/").addResourceLocations("classpath:/resources/");
 
+        //热门商品图片映射
+        registry.addResourceHandler("/image/product/**").addResourceLocations("" +
+                "file:D:\\shopping_v1\\productImgs\\");
     }
 }
