@@ -9,6 +9,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 商品
@@ -52,6 +53,8 @@ public class Product {
     @JsonSerialize(using= CustomDateTimeSerializer.class)
     private Date hotDateTime; // 设置热门推荐日期时间
 
-
+    // TODO:下面我也不知道是不是放在这里
+    @TableField(select = false)
+    private List<ProductSwiperImage> productSwiperImageList;
 
 }
