@@ -19,11 +19,15 @@ public class WebAppConfigurer implements WebMvcConfigurer {
         registry.addResourceHandler("/image/bigType/**").addResourceLocations("file:/D:/shopping_v1/bigTypeImgs/").addResourceLocations("classpath:/resources/");
 
         // 热门商品图片映射
-        registry.addResourceHandler("/image/product/**").addResourceLocations("" +
-                "file:D:\\shopping_v1\\productImgs\\");
+        registry.addResourceHandler("/image/product/**").addResourceLocations("" + "file:D:\\shopping_v1\\productImgs\\");
 
         // 配置商品轮播图片虚拟路径映射
-        registry.addResourceHandler("/image/productSwiperImgs/**").addResourceLocations("" +
-                "file:D:\\shopping_v1\\productSwiperImgs\\");
+        registry.addResourceHandler("/image/productSwiperImgs/**").addResourceLocations("" + "file:D:\\shopping_v1\\productSwiperImgs\\");
+
+        //商品详情路径
+        registry.addResourceHandler("/image/productIntroImgs/**").addResourceLocations("file:D:\\shopping_v1\\productIntroImgs\\");
+
+        //规则参数路径
+        registry.addResourceHandler("/image/productParaImgs/**").addResourceLocations("file:D:\\shopping_v1\\productParaImgs\\");
     }
 }
