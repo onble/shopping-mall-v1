@@ -19,3 +19,8 @@ mybatis-plus:
     auto-mapping-behavior: full # 自动映射任何复杂的结果
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mybatis/mapper/*.xml # 写上这个就不用把文件结构也需要一致了
+
+weixin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session # 小程序登录鉴权接口地址，返回code码
+  appid: wxfff2f37a40bee5cc                 # 你的小程序的ID
+  secret: d7f88847dd95810e648d6651e79a843a  # 你的小程序的秘钥
